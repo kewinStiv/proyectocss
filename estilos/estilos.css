@@ -1,0 +1,216 @@
+body{
+	background-color: #02010a;
+	font-family: 'Dancing Script', cursive;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+#contenedor1{
+	max-width: 900px;
+	margin:0 auto;
+	background-color: #02010a;
+
+}
+
+header{
+	background-color: #5b7989;
+	color: white;
+	text-shadow: 2px 2px 2px #02010a;
+	border-radius: 10px 10px 0px 0px;
+	animation: animacionHeader 1s;
+
+}
+
+@-webkit-keyframes animacionHeader{
+	0%{
+		margin-top: 150%;
+	}
+
+	60%{
+		margin-top: -5%
+	}
+
+	100%{
+		margin-top: 0%;
+	}
+}
+
+header h1{
+	text-align: center;
+}
+
+header nav li a{
+	
+	color: white;
+}
+
+header nav li a:link{
+	text-decoration: underline;
+}
+
+header nav li{
+	padding: 10px;
+	margin: 0 auto;
+	list-style: none;
+}
+
+header nav ul{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0px 10px 0px 10px;
+	margin: 0px;
+}
+
+header nav a:link{
+	text-decoration: underline;
+}
+
+.div-sect{
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.img-div{
+	width: 90%;
+	
+}
+
+#div1{
+	background-color: #82c3a6; 
+}
+
+#div2{
+	background-color: #d5c75f;
+}
+
+.img-art{
+	border: 2px solid black;
+	box-shadow: 2px 2px 3px #82c3a6;
+}
+
+footer{
+	border-radius: 0px 0px 10px 10px;
+	background-color: #c6d5c5;
+	box-sizing: border-box;
+	margin: 0px 0px 10px 0px;
+	padding: 20px;
+}
+
+footer li{
+	list-style: none;
+}
+
+/* ******************************** HASTA AQUI VA INICIO SIN LOS MEDIA QUERIE******************************************* */
+
+/* ********************************* A PARTIR DE AHORA VAMOS CON LOS ESTILOS DE PAISAJES Y RETRATOS ******************************* */
+
+#contenedor{
+	width: 100%;
+	background-color: #d5c75f;
+	text-align: center;
+}
+
+.div-img{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.img-div{
+	width: 80%;
+}
+
+#img-div1{
+	-webkit-filter:blur;
+	filter: blur(10px);
+}
+
+article div:nth-child(even) img{
+	-webkit-filter:grayscale;
+	filter: grayscale(100%);
+}
+
+#img-div3{
+	-webkit-filter:sepia;
+	filter: sepia(90%);
+}
+
+/* **************************************************** HASTA AQUI LOS ESTILOS PARA PAISAJES Y RETRATOS ***************************** */
+
+/* ************************************************** AHORA LOS MEDIA QUERIES ***************************************************** */
+
+@media (min-width: 900px){
+
+	header{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	header h1{
+		margin-left: 20px;
+		margin-right: 30%;
+		min-width: 40%;
+	}
+
+	header nav ul{
+		margin-top: 20px;
+	}
+
+	#div2{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.div-1-img{
+		width: 50%;
+	}
+
+	#img2{
+		transition: transform 1s;
+	}
+
+	#img2:hover{
+		transform: rotate(10deg);
+	}
+
+	#img3{
+		min-height: 230px;
+		transition: transform 1s;
+	}
+
+	#img3:hover{
+		transform: translate(20px,-5px);
+	}
+
+	footer{
+		display: flex;
+		flex-flow: row;
+	}
+
+	footer div{
+		width: 25%;
+		box-sizing: border-box;
+		padding: 10px;
+	}
+
+	/* ************************************* HASTA AQUI LOS ESTILOS CON LOS MEDIA DE INICIO ******************** */
+
+	/* ************************************* AHORA VAMOS CON LOS ESTILOS DE PAISAJES Y RETRATOS ************* */ 
+
+	#contenedor{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.div-img{
+		width: 33.33%;
+	}
+
+
+}
